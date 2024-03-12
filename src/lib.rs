@@ -995,6 +995,10 @@ fn spine_update_meshes(
                         MeshVertexAttribute::new("Vertex_Position", 0, VertexFormat::Float32x2),
                         vertices,
                     );
+                    info!("colors: {:?}", colors);
+                    info!("dark colors: {:?}", dark_colors);
+                    info!("blend mode: {:?}", blend_mode);
+                    info!("pma: {:?}", premultiplied_alpha);
                     mesh.insert_attribute(Mesh::ATTRIBUTE_NORMAL, normals);
                     mesh.insert_attribute(Mesh::ATTRIBUTE_UV_0, uvs);
                     mesh.insert_attribute(Mesh::ATTRIBUTE_COLOR, colors);
