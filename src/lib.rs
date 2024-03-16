@@ -925,7 +925,7 @@ fn spine_update_meshes(
                         indices,
                         uvs,
                         colors,
-                        mut dark_colors,
+                        dark_colors,
                         blend_mode,
                         premultiplied_alpha,
                     ) = match &mut renderables {
@@ -995,23 +995,6 @@ fn spine_update_meshes(
                         MeshVertexAttribute::new("Vertex_Position", 0, VertexFormat::Float32x2),
                         vertices,
                     );
-                    // info!("colors: {:?}", colors);
-                    // info!("dark colors: {:?}", dark_colors);
-                    // info!("blend mode: {:?}", blend_mode);
-                    // info!("pma: {:?}", premultiplied_alpha);
-                    // let mut to_alpha = 0.;
-                    // if premultiplied_alpha {
-                    //     to_alpha = 1.0;
-                    // }
-                    // for c in dark_colors.iter_mut() {
-                    //     println!("{:?}", c);
-                    //     if c[3] != 0. {
-                    //         c[0] = 0.;
-                    //         c[1] = 0.;
-                    //         c[2] = 0.;
-                    //     }
-                    //     c[3] = to_alpha;
-                    // }
                     mesh.insert_attribute(Mesh::ATTRIBUTE_NORMAL, normals);
                     mesh.insert_attribute(Mesh::ATTRIBUTE_UV_0, uvs);
                     mesh.insert_attribute(Mesh::ATTRIBUTE_COLOR, colors);
