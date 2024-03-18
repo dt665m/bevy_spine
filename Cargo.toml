@@ -12,7 +12,7 @@ exclude = [
 ]
 
 [dependencies]
-rusty_spine = { git = "https://github.com/dt665m/rusty_spine.git", branch = "dark_color_pma-opt" }
+rusty_spine = "0.7.1"
 
 bevy = { version = "0.12", default-features = false, features = [ "bevy_render", "bevy_asset", "bevy_sprite" ] }
 glam = { version = "0.24", features = [ "mint" ] }
