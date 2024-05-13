@@ -559,7 +559,8 @@ fn spine_load(
                             Ok(skeleton_data) => {
                                 *status = SkeletonDataStatus::Loaded(Arc::new(skeleton_data));
                             }
-                            Err(_err) => {
+                            Err(err) => {
+                                log::error!("skeleton import error: {err}");
                                 *status = SkeletonDataStatus::Failed;
                                 continue;
                             }
